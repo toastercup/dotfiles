@@ -1,3 +1,5 @@
+eval "$(rbenv init -)"
+
 source /usr/share/zsh/scripts/antigen/antigen.zsh
 
 antigen use oh-my-zsh
