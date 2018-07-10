@@ -45,7 +45,6 @@ freerdp
 gawk
 gcc
 gcc-libs
-gdm
 gedit
 gettext
 gimp
