@@ -16,4 +16,3 @@ antigen bundle alexrochas/git-semantic-commits
 antigen theme kphoen
 
 antigen apply
-
