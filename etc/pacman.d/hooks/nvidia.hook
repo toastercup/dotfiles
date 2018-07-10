@@ -9,4 +9,3 @@ Target=nvidia
 Depends=mkinitcpio
 When=PostTransaction
 Exec=/usr/bin/mkinitcpio -P
-

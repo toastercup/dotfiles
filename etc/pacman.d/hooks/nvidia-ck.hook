@@ -9,4 +9,3 @@ Target=nvidia-ck-skylake
 Depends=mkinitcpio
 When=PostTransaction
 Exec=/usr/bin/mkinitcpio -P
-
