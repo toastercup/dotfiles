@@ -23,6 +23,7 @@ dhcpcd
 diffutils
 discord
 dmidecode
+docker
 downgrade
 dropbox
 e2fsprogs
@@ -118,6 +119,7 @@ perl
 pingus
 pkgbrowser
 pkgconf
+playonlinux
 polari
 postgresql
 procps-ng
@@ -137,10 +139,12 @@ rubymine
 s-nail
 sed
 shadow
+skypeforlinux-preview-bin
 spotify
 steam
 steam-native-runtime
 sudo
+syncplay
 sysfsutils
 system-config-printer
 systemd-sysvcompat
