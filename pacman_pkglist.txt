@@ -155,6 +155,7 @@ tar
 teamviewer
 telegram-desktop-bin
 texinfo
+tmux
 totem
 trizen
 ttf-ms-fonts
