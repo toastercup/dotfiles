@@ -24,6 +24,7 @@ diffutils
 discord
 dmidecode
 docker
+docker-compose
 downgrade
 dropbox
 e2fsprogs
@@ -31,6 +32,7 @@ elasticsearch
 emacs
 eog
 evince
+exfat-utils
 fakeroot
 file
 file-roller
@@ -55,17 +57,14 @@ gnome-boxes
 gnome-calculator
 gnome-clocks
 gnome-color-manager
-gnome-control-center
 gnome-disk-utility
 gnome-keyring
 gnome-logs
 gnome-menus
 gnome-nettool
 gnome-screenshot
-gnome-shell-extensions
 gnome-system-monitor
 gnome-terminal
-gnome-todo
 google-chrome
 grep
 grilo-plugins
@@ -78,6 +77,7 @@ gvfs-mtp
 gzip
 hipchat
 hiri
+htop
 inetutils
 intel-ucode
 iproute2
@@ -94,6 +94,8 @@ lightdm-gtk-greeter
 linux
 linux-ck-skylake
 logrotate
+lsof
+lutris
 lvm2
 m4
 make
@@ -140,6 +142,7 @@ s-nail
 sed
 shadow
 skypeforlinux-preview-bin
+soulseekqt
 spotify
 steam
 steam-native-runtime
