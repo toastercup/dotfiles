@@ -17,3 +17,5 @@
 [alias]
 	uncommit = reset --soft HEAD^
 	unstage = reset
+[grep]
+	lineNumber = true
