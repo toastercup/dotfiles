@@ -3,3 +3,11 @@
 	name = Alex Tharp
 [core]
 	excludesfile = /home/atharp/.gitignore_global
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	trustExitCode = false
+[diff]
+	guitool = kdiff3
+[difftool "kdiff3"]
+	trustExitCode = false
