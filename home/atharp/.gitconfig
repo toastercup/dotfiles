@@ -1,3 +1,5 @@
 [user]
 	email = alex@toastercup.io
 	name = Alex Tharp
+[core]
+	excludesfile = /home/atharp/.gitignore_global
