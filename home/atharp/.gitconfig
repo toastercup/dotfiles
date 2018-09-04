@@ -12,3 +12,5 @@
 	guitool = kdiff3
 [difftool "kdiff3"]
 	trustExitCode = false
+[color]
+	ui = true
