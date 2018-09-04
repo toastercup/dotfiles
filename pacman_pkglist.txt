@@ -84,6 +84,7 @@ iproute2
 iputils
 jfsutils
 jre
+kdiff3
 less
 lib32-nvidia-utils
 libreoffice-fresh
@@ -95,7 +96,6 @@ linux
 linux-ck-skylake
 logrotate
 lsof
-lutris
 lvm2
 m4
 make
@@ -160,7 +160,6 @@ totem
 trizen
 ttf-ms-fonts
 unity-editor
-unity-editor-standardassets
 unrar
 usbutils
 util-linux
