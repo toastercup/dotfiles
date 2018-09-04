@@ -3,6 +3,7 @@
 	name = Alex Tharp
 [core]
 	excludesfile = /home/atharp/.gitignore_global
+	autocrlf = input
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
