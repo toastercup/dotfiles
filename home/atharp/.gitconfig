@@ -14,3 +14,6 @@
 	trustExitCode = false
 [color]
 	ui = true
+[alias]
+	uncommit = reset --soft HEAD^
+	unstage = reset
