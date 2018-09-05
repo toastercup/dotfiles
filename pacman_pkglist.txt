@@ -1,3 +1,4 @@
+ack
 antigen-git
 arc-gtk-theme
 arc-icon-theme
