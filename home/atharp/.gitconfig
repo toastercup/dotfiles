@@ -15,5 +15,6 @@
 [alias]
 	uncommit = reset --soft HEAD^
 	unstage = reset
+	search = log -p -G
 [grep]
 	lineNumber = true
