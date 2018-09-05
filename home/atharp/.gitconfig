@@ -12,8 +12,6 @@
 	guitool = kdiff3
 [difftool "kdiff3"]
 	trustExitCode = false
-[color]
-	ui = true
 [alias]
 	uncommit = reset --soft HEAD^
 	unstage = reset
