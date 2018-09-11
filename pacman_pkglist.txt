@@ -67,6 +67,7 @@ gnome-screenshot
 gnome-system-monitor
 gnome-terminal
 google-chrome
+graphviz
 grep
 grilo-plugins
 gst-libav
@@ -132,7 +133,6 @@ rbenv
 read-edid
 redis
 redshift
-refind-efi
 reflector
 reiserfsprogs
 remmina
@@ -151,6 +151,7 @@ sudo
 syncplay
 sysfsutils
 system-config-printer
+systemd-boot-pacman-hook
 systemd-sysvcompat
 tar
 teamviewer
