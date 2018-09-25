@@ -41,6 +41,7 @@ filesystem
 filezilla
 findutils
 firefox
+firestorm-bin
 flashplugin
 flex
 fonts-meta-extended-lt
@@ -59,6 +60,7 @@ gnome-calculator
 gnome-clocks
 gnome-color-manager
 gnome-disk-utility
+gnome-games
 gnome-keyring
 gnome-logs
 gnome-menus
@@ -88,7 +90,9 @@ jfsutils
 jre
 kdiff3
 less
+lib32-libidn-133-compat
 lib32-nvidia-utils
+libidn-133-compat
 libreoffice-fresh
 libtool
 licenses
@@ -106,6 +110,7 @@ man-pages
 mdadm
 nano
 nemo-dropbox
+nemo-fileroller
 net-tools
 netctl
 networkmanager
@@ -118,6 +123,7 @@ nvidia-settings
 p7zip
 pacman
 patch
+pavucontrol
 pciutils
 perl
 pingus
