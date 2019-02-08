@@ -1,18 +1,7 @@
 eval "$(rbenv init -)"
 
-source /usr/share/zsh/share/antigen.zsh
+DISABLE_AUTO_UPDATE=true
+ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
-antigen use oh-my-zsh
-
-antigen bundle git
-antigen bundle rbenv
-antigen bundle ruby
-antigen bundle command-not-found
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle Tarrasch/zsh-autoenv
-antigen bundle alexrochas/git-semantic-commits
-
-antigen theme kphoen
-
-antigen apply
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins

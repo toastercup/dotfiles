@@ -1,0 +1,12 @@
+robbyrussell/oh-my-zsh
+
+robbyrussell/oh-my-zsh folder:plugins/common-aliases
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/rbenv
+robbyrussell/oh-my-zsh path:plugins/ruby
+robbyrussell/oh-my-zsh path:plugins/command-not-found
+
+zsh-users/zsh-syntax-highlighting
+djui/alias-tips
+
+robbyrussell/oh-my-zsh path:themes/kphoen.zsh-theme
