@@ -56,6 +56,7 @@ freerdp
 gawk
 gcc
 gcc-libs
+geary
 gedit
 gettext
 gimp
@@ -63,6 +64,7 @@ git
 glibc
 gnome-boxes
 gnome-calculator
+gnome-calendar
 gnome-clocks
 gnome-color-manager
 gnome-disk-utility
@@ -124,6 +126,7 @@ netctl
 networkmanager
 networkmanager-openvpn
 nfs-utils
+ngrok
 nmap
 noto-fonts-emoji
 ntfs-3g
@@ -185,6 +188,7 @@ tmux
 totem
 trizen
 ttf-ms-fonts
+typora
 unity-editor
 unrar
 usbutils
@@ -202,6 +206,7 @@ xorg-xinit
 xorg-xrandr
 xterm
 yarn
+zeal
 zoom
 zsh
 zsh-completions
