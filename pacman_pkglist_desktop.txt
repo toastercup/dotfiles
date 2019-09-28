@@ -12,6 +12,8 @@ bash
 binutils
 bison
 bleachbit
+broadcom-wl
+broadcom-wl-ck-skylake
 bzip2
 cheese
 cinnamon
@@ -90,13 +92,15 @@ gzip
 hiri
 htop
 hub
-imagemagick6
+imagemagick
 inetutils
 intel-ucode
 iproute2
 iputils
+java-environment-common
 jfsutils
-jre
+jre-openjdk
+jre8-openjdk
 kde-gtk-config
 kdiff3
 krita
@@ -108,6 +112,7 @@ libtool
 licenses
 lightdm
 lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
 linux
 linux-ck-skylake
 logrotate
@@ -118,6 +123,7 @@ make
 man-db
 man-pages
 mdadm
+minecraft-launcher
 nano
 nemo-dropbox
 nemo-fileroller
@@ -154,6 +160,7 @@ procps-ng
 psmisc
 python2-dbus
 qbittorrent
+qt5ct
 rbenv
 read-edid
 redis
@@ -165,6 +172,7 @@ ruby
 ruby-build
 rubymine
 s-nail
+sayonara-player
 sed
 shadow
 simplescreenrecorder
@@ -181,15 +189,19 @@ system-config-printer
 systemd-boot-pacman-hook
 systemd-sysvcompat
 tar
+tcpdump
+tcpflow
 teamviewer
 telegram-desktop
 texinfo
 tmux
 totem
+transmission-qt
 trizen
 ttf-ms-fonts
 typora
 unity-editor
+unityhub
 unrar
 usbutils
 util-linux
@@ -199,6 +211,8 @@ vim
 vlc
 whatsapp-web-desktop
 which
+wireshark-qt
+wkhtmltopdf
 xclip
 xdg-user-dirs-gtk
 xfsprogs
@@ -206,7 +220,7 @@ xorg-xinit
 xorg-xrandr
 xterm
 yarn
-zeal
+zeal-git
 zoom
 zsh
 zsh-completions
