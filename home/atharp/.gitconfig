@@ -2,7 +2,7 @@
 	email = alex@toastercup.io
 	name = Alex Tharp
 [core]
-	excludesfile = /home/atharp/.gitignore_global
+	excludesfile = /home/alex/.gitignore_global
 	autocrlf = input
 [merge]
 	tool = kdiff3
@@ -16,5 +16,9 @@
 	uncommit = reset --soft HEAD^
 	unstage = reset
 	search = log -p -G
+	b = ! git checkout $(git more-recent-branches | fzf --preview 'git log {} --stat | head -n 100')
+	more-recent-branches = for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/
 [grep]
 	lineNumber = true
+[pull]
+	ff = only
