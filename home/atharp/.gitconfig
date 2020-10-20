@@ -4,6 +4,7 @@
 [core]
 	excludesfile = /home/alex/.gitignore_global
 	autocrlf = input
+	attributesfile = /home/alex/.gitattributes
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
