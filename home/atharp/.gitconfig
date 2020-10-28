@@ -2,9 +2,9 @@
 	email = alex@toastercup.io
 	name = Alex Tharp
 [core]
-	excludesfile = /home/alex/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
-	attributesfile = /home/alex/.gitattributes
+	attributesfile = ~/.gitattributes
 [merge]
 	tool = kdiff3
 [mergetool "kdiff3"]
