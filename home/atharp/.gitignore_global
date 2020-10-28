@@ -748,5 +748,8 @@ MigrationBackup/
 
 # Begin custom rules
 
+### IntelliJ/RubyMine/etc ###
+.idea/
+
 ### Documentation Artifacts ###
 erd.pdf
