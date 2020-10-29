@@ -6,7 +6,6 @@ robbyrussell/oh-my-zsh path:plugins/rbenv
 robbyrussell/oh-my-zsh path:plugins/ruby
 robbyrussell/oh-my-zsh path:plugins/command-not-found
 
-lukechilds/zsh-nvm
 lukechilds/zsh-better-npm-completion
 
 zsh-users/zsh-syntax-highlighting
