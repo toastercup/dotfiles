@@ -6,9 +6,10 @@ robbyrussell/oh-my-zsh path:plugins/rbenv
 robbyrussell/oh-my-zsh path:plugins/ruby
 robbyrussell/oh-my-zsh path:plugins/command-not-found
 
-lukechilds/zsh-better-npm-completion
+robbyrussell/oh-my-zsh path:themes/kphoen.zsh-theme
 
+g-plane/zsh-yarn-autocompletions
+lukechilds/zsh-better-npm-completion
 zsh-users/zsh-syntax-highlighting
 djui/alias-tips
 
-robbyrussell/oh-my-zsh path:themes/kphoen.zsh-theme
