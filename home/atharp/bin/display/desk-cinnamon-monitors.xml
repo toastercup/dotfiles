@@ -1,0 +1,49 @@
+<monitors version="1">
+  <configuration>
+      <clone>no</clone>
+      <base_scale>1</base_scale>
+      <output name="DP-0">
+          <vendor>DEL</vendor>
+          <product>0xa07b</product>
+          <serial>0x3154564c</serial>
+          <width>1920</width>
+          <height>1200</height>
+          <rate>59.950000</rate>
+          <x>0</x>
+          <y>307</y>
+          <scale>1.000000</scale>
+          <rotation>normal</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>yes</primary>
+      </output>
+      <output name="DP-1">
+      </output>
+      <output name="HDMI-0">
+          <vendor>TCL</vendor>
+          <product>0x0000</product>
+          <serial>0x00000000</serial>
+      </output>
+      <output name="DP-2">
+      </output>
+      <output name="DP-3">
+      </output>
+      <output name="DP-4">
+          <vendor>DEL</vendor>
+          <product>0xa07b</product>
+          <serial>0x34453053</serial>
+          <width>1920</width>
+          <height>1200</height>
+          <rate>59.950000</rate>
+          <x>1920</x>
+          <y>0</y>
+          <scale>1.000000</scale>
+          <rotation>left</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>no</primary>
+      </output>
+      <output name="DP-5">
+      </output>
+  </configuration>
+</monitors>
