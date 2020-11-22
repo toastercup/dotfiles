@@ -1,0 +1,4 @@
+.include /etc/pulse/default.pa
+
+load-module module-stream-restore restore_device=false
+
