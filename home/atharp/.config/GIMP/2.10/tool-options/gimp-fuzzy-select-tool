@@ -1,0 +1,6 @@
+# GIMP gimp-fuzzy-select-tool options
+
+(feather yes)
+(threshold 93.200000000000003)
+
+# end of gimp-fuzzy-select-tool options

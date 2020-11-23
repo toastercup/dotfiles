@@ -1,0 +1,262 @@
+<!docttype HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>ofn-text-along-path</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<style>
+code { 
+    color: #000000; 
+    background: #f8f8f8; 
+    border-style: solid; 
+    border-width: thin; 
+    border-color: #e0e0e0; 
+    border-radius: 3px; 
+    padding-left: 3px;
+    padding-right: 3px;    
+}
+pre { 
+    color: #000000; 
+    background: #ffffff; 
+    border-style: solid; 
+    border-width: medium; 
+    border-color: #c0c0c0; 
+    border-radius: 5px; 
+    padding-top: 8px;
+    padding-bottom: 5px;    
+    padding-left: 8px;
+    padding-right: 8px;    
+}
+
+</style>
+<body>
+<div style="padding: 20px; width: 800px; font-size:120%; color: #000040; background: #f0f0f0; ">
+<h2>Foreword</h2>
+
+<p>This script is about "paths", so this documentation makes a heavy use of path concepts and terminology.</p>
+
+<p>For some introductory information on Gimp's paths, see <a href="https://www.gimp-forum.net/Thread-Paths-Basics">here</a>
+and <a href="https://docs.gimp.org/en/gimp-using-paths.html">there</a>.</p>
+
+<h1>ofn-text-along-path</h1>
+
+<p>This tool attempts to improve on the <code>Text along path</code> function in Gimp's Text tool. The improvements are:</p>
+
+<ul>
+<li>Character shapes are not distorted: while Gimp's tool works by remapping the text path control points using the guide path, 
+this script rotates and moves each character path without distortion.</li>
+<li>Text can left-aligned, right-aligned, centered, justified, or repeated on the path.</li>
+<li>The vertical position with respect to the guide path can be specified</li>
+<li>The path of individual characters can be obtained</li>
+<li>Some more frivolous options may appeal to the artist or the ransom note writer.</li>
+</ul>
+
+<p>Like the Gimp's native version, it produces a path.</p>
+
+<p>There are two different functions:</p>
+
+<ul>
+<li>In the first one, one single piece of text is used over every stroke in the path.</li>
+<li>In the second one (a.k.a. multi) several pieces of text are used, one for each stroke of the path.</li>
+</ul>
+
+<p>This script is called from the <strong>Paths list dialog</strong>, by right-clicking on the path used as a guide for the text, It appears in the <code>Tools</code> sub-menu (at the bottom of the menu elicited by the right-click). </p>
+
+<h2>Options</h2>
+
+<h3>Text</h3>
+
+<p>The text. </p>
+
+<ul>
+<li>In standard mode this is just one line of text, which should fit the shortest stroke in the guide path. </li>
+<li>In "multi" mode, each piece of text should be on its own line and be short enough to fit the corresponding stroke. 
+There should be exactly as many lines as there are strokes in the guide path.</li>
+</ul>
+
+<h3>Spacer</h3>
+
+<p>The characters to be inserted between each repetition of the text, when using the <code>Repeated</code> layout. On an open stroke,
+this spacer is only inserted between copies of the text, and is not added to either end. 
+On a closed stroke, it is added to each instance of the text, so that the text+spacer cycle repeats over the whole stroke.</p>
+
+<h3>Font name</h3>
+
+<p>The font to use. If this is left blank, the script will use the current Gimp font (the one used in the Text tool).</p>
+
+<h3>Font size</h3>
+
+<p>The font size (in pixels).</p>
+
+<h3>Layout</h3>
+
+<p>How the text is placed on the guide path stroke. Possible layouts are:</p>
+
+<ul>
+<li><code>Left-aligned</code>: the text its kept at its native width, and starts at the beginning of the stroke.</li>
+<li><code>Right-aligned</code>: the text its kept at its native width, and ends on the end of the stroke.</li>
+<li><code>Centered</code>: the text its kept at its native width, and is centered in the stroke.</li>
+<li><code>Justified</code>: extra space is added between the characters, so that the text is made exactly wide enough to fill the whole stroke length.</li>
+<li><code>Repeated</code>: the text is repeated as many times as can fit in the stroke, and then widened to exactly fit the stroke. 
+If specified, a copy of the <code>spacer</code> text is inserted between each copy of the text.</li>
+</ul>
+
+<p><img src="Layouts.png" alt="Layouts][1" title=""></p>
+
+<h3>Use kerning</h3>
+
+<p>The script attempts to space the letters more evenly by using <a href="https://en.wikipedia.org/wiki/Kerning">kerning</a>.
+The kerning is obtained indirectly and may not work for all fonts; in particular, it is best left out for italic fonts.</p>
+
+<p><img src="Kerning.png" alt="Kerning][1" title=""></p>
+
+<h3>Extra spacing</h3>
+
+<p>Extra space inserted between all characters, to widen the text. Partial pixel values are allowed. 
+This is useful to give a bit more room to characters and avoid overlaps when the path stroke has a tight curve or when using the <code>tilt wiggle</code>. 
+The <code>Justified</code> layout ignores this value, while the <code>Repeated</code> layout uses it as a minimum value (but the actual character spacing can be wider).</p>
+
+<h3>Height reference</h3>
+
+<p>How the text is positioned vertically with respect to the guide path. The <code>box</code> in the choices is the boundary of the text layer that would hold the characters in the Text tool.</p>
+
+<p><img src="HeightReference.png" alt="HeightReference][1" title=""></p>
+
+<p>The actual height for <code>Top of Uppercase</code>, <code>Middle of Uppercase</code>, <code>Top of Lowercase</code>, <code>Middle of Lowercase</code>, 
+is computed by examining a rendering of the uppercase and lowercase of variants of <code>X</code>. This may not work for "artistic" fonts.</p>
+
+<h3>Vertical adjust</h3>
+
+<p>Height adjustment, added to the <code>height reference</code> above. Partial pixel values are allowed.</p>
+
+<h3>Keep upright</h3>
+
+<p>When this is true, characters are not tilted to follow the guide path.</p>
+
+<p><img src="KeepUpright.png" alt="KeepUpright][1" title=""></p>
+
+<h3>Lateral wiggle</h3>
+
+<p>The maximum value for a random lateral displacement of each character. It is expressed as a percent 
+of the average character width.</p>
+
+<h3>Vertical wiggle</h3>
+
+<p>The maximum value for a random vertical displacement of each character. It is expressed as a percent 
+of the height of the <code>character box</code>.</p>
+
+<h3>Tilt wiggle</h3>
+
+<p>The maximum value for a random additional tilt for each character, in degrees.</p>
+
+<p><img src="Wiggles.png" alt="Wiggles][1" title=""></p>
+
+<h3>Reverse stroke direction</h3>
+
+<p>When this is true, the characters are laid by walking the path strokes in the opposite direction. This also puts the characters
+on the other side of the strokes. If the path is made of several strokes, this applies to <strong>all</strong> the strokes.</p>
+
+<p><img src="Reversed.png" alt="Reverse][1" title=""></p>
+
+<h3>Generate, Show boxes as paths</h3>
+
+<p>These two options provide several ways to generate the paths. </p>
+
+<p><code>Show boxes as paths</code> is initially meant for debugging. It generates a square path around the character box, 
+making more obvious how/why the character path is positioned. It was left in because it can have more artistic uses.
+Its actual output depends on the <code>Generate</code> selection.</p>
+
+<p><code>Generate</code> is the main option, the possible values are:</p>
+
+<ul>
+<li><code>One single path</code>: a single path is created to hold all character output. If boxes are requested, an additional path is created for them.</li>
+<li><code>One path per stroke</code>: a path is created for the characters laid out on each stroke of the guide path. This is typically used for animation.
+If boxes are requested, an additional path is created for each stroke.</li>
+<li><code>Separate text and spacer paths</code>: two paths are created, one for all the characters from the <code>Text</code> input, and one for all the characters 
+from the <code>Spacer</code> input. This is useful if these classes of characters do not receive the same post-processing (color, etc...).
+If boxes are requested, two additional paths are created, one of the text boxes and one for the spacer boxes.</li>
+<li><code>One path per character</code>: A path is created for each character. If boxes are requested, the boxes are added to that same path, 
+so that each path contains a character and its box.</li>
+</ul>
+
+<p><img src="RansomNote.png" alt="Boxes][1" title=""></p>
+
+<h2>Usage notes</h2>
+
+<h3>Characters</h3>
+
+<p>The script can use any character that you can enter in the dialog and that is present in the font. 
+This means that with a standard font, you have the whole set of Unicode symbols available, including
+emojis and such. These non-alphabetic characters are not available on a regular keyboard but can be copy/pasted
+from some character map (or a web page that displays them). </p>
+
+<h3>Path</h3>
+
+<p>The script runs on all strokes of the path, considering each stroke as a separate unit. 
+If things don't seem to work, search for overlooked strokes (typically, single-point ones).</p>
+
+<h3>Stroke origin and direction</h3>
+
+<p>The text is laid out on the stroke from its starting point to its ending point. 
+In most cases, open strokes run from left to right and closed strokes run clockwise. 
+If the path contains a single stroke, the <code>Reverse</code> option can be used to work around this. 
+If there are several strokes, this option is useful only if they are all in the wrong direction. 
+See below for a script that can reverse the direction of specific strokes in a path. </p>
+
+<p>Stroke origin is difficult to determine on closed strokes such as circles. 
+<a href="https://www.gimp-forum.net/Thread-Paths-Basics">This short write-up</a> expounds a
+technique to change the stroke origin of a closed stroke.</p>
+
+<h3>Sports patches and other circular uses</h3>
+
+<p>A typical use of this script is to put text around a circle. This text is very often split in two parts, one around the top and
+one around the bottom. To make sure the text is centered at the top and bottom, there are two solutions:</p>
+
+<ol>
+<li><p>Keeping the full circle:</p>
+
+<ul>
+<li>Make sure the circle starts and ends on the 6 hours mark</li>
+<li>Position the top text (using the <code>Centered</code> layout)</li>
+<li>Duplicate the circle path, and flip it vertically with the Flip tool (in <code>Flip Path</code> mode of course)</li>
+<li>Position the bottom text (using the <code>Centered</code> layout). Flipping the circle has the side effect of reversing its direction
+so there is no need to use the <code>Reverse path direction</code> option.</li>
+</ul></li>
+<li><p>Splitting the circle (this can be used only if both top and bottom texts are shorter than a half-circle):</p>
+
+<ul>
+<li>Add anchors along the horizontal diameter if there are no such anchors </li>
+<li>Duplicate the circle</li>
+<li>Cut the bottom half on one, and the top half on the other</li>
+<li>Position the top text (using the <code>Centered</code> layout)</li>
+<li>Position the bottom text (using the <code>Centered</code> layout). You will normally have to use the <code>Reverse path direction</code> on that one.</li>
+</ul></li>
+</ol>
+
+<p>A result, using a flipped path, the Unicode "Anchor" symbol (<code>U+2693</code>) and the "Roboto Bold" font:</p>
+
+<p><img src="CircleAndSymbols.png" alt="Circle and Symbols][1" title=""></p>
+
+<p>To make sure that the text is laid out the same way at the top and bottom, either use <code>Middle of Uppercase/Lowercase</code> for both 
+text parts, or use <code>Top of Uppercase/Lowercase</code> for one and <code>Baseline</code> for the other.</p>
+
+<h3>Path generation</h3>
+
+<p>To keep things reasonaly simple, the path generation options have been restricted to the more useful cases.
+It is possible to combine them by repeating the script with different generation options and discarding
+the unecessary output.</p>
+
+<h3>Other useful scripts</h3>
+
+<p>See my <a href="https://sourceforge.net/projects/gimp-path-tools/files/scripts/">ofn-path-edits</a> for several functions that can help:</p>
+
+<ul>
+<li>Determining the strokes of a path: number, order, and their start/end points</li>
+<li>Reversing a stroke</li>
+<li>Extracting a stroke from a path</li>
+<li>Splicing strokes together</li>
+</ul>
+
+<p>See my <a href="https://sourceforge.net/projects/gimp-path-tools/files/scripts/">ofn-path-to-shape</a> to easily create circles with 
+known anchors, and also easily create concentric circles. </p>
+</div></body></html>

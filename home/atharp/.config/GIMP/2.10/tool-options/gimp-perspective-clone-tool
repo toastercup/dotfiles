@@ -1,0 +1,13 @@
+# GIMP gimp-perspective-clone-tool options
+
+(foreground (color-rgb 0.23921568691730499 0.13333334028720856 0.30196079611778259))
+(background (color-rgb 0.90291262135922334 0.90291262135922334 0.90291262135922334))
+(brush "1. Pixel")
+(dynamics "Dynamics Off")
+(pattern "Pine")
+(palette "Default")
+(brush-size 86)
+(brush-spacing 0.20000000000000001)
+(brush-force 1)
+
+# end of gimp-perspective-clone-tool options

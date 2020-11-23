@@ -1,0 +1,9 @@
+# GIMP gimp-text-tool options
+
+(foreground (color-rgb 0.23921568691730499 0.13333334028720856 0.30196079611778259))
+(palette "Default")
+(font "Neue Haas Grotesk Text Pro")
+(font-size 20)
+(justify center)
+
+# end of gimp-text-tool options

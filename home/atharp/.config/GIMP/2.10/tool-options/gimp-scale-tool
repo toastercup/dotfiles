@@ -1,0 +1,6 @@
+# GIMP gimp-scale-tool options
+
+(background (color-rgb 0.90291262135922334 0.90291262135922334 0.90291262135922334))
+(interpolation nohalo)
+
+# end of gimp-scale-tool options
