@@ -1,10 +1,8 @@
-DISABLE_AUTO_UPDATE=true
-ASDF_DIR="/opt/asdf-vm"
-ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+export DISABLE_AUTO_UPDATE=true
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins
-
 
 # A shortcut function that simplifies usage of xclip.
 # - Accepts input from either stdin (pipe), or params.

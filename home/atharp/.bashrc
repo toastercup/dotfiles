@@ -8,4 +8,6 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-source /opt/asdf-vm/asdf.sh
+source "$HOME/.bashenv"
+
+source "$ASDF_DIR/asdf.sh"

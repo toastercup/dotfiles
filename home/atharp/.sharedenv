@@ -1,0 +1,4 @@
+source "$HOME/.sharedenv_secrets"
+
+export ASDF_DIR="/opt/asdf-vm"
+export EDITOR=vim
