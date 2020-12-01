@@ -1,4 +1,5 @@
 DISABLE_AUTO_UPDATE=true
+ASDF_DIR="/opt/asdf-vm"
 ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 source <(antibody init)
