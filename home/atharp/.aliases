@@ -1,1 +1,6 @@
 alias nodejs="node"
+
+# Work-specific aliases
+alias cdc="cd ~/repos/calendly"
+alias con="cdc && ~/repos/calendly/bin/rails c"
+alias dup="docker-compose --file ~/repos/calendly/docker/docker-compose.dev.yml up -d"
