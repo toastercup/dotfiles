@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -eu
+
+OPTIMIZER_PATH="/usr/local/lib/LSL-PyOptimizer/main.py"
+
+python2 $OPTIMIZER_PATH "$@"
+

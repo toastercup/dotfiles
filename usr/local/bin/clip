@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -eu
+
+if [ -x "$(command -v clip.exe)" ]; then
+  clip.exe # for WSL
+else
+  xclip -sel clip
+fi
+

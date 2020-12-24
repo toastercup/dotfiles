@@ -1,3 +1,6 @@
 [submodule "home/atharp/.vim_runtime"]
 	path = home/atharp/.vim_runtime
 	url = https://github.com/amix/vimrc.git
+[submodule "usr/local/lib/LSL-PyOptimizer"]
+	path = usr/local/lib/LSL-PyOptimizer
+	url = git@github.com:Sei-Lisa/LSL-PyOptimizer.git
