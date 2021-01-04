@@ -6,7 +6,7 @@
 	autocrlf = input
 	attributesfile = ~/.gitattributes
 [merge]
-	tool = kdiff3
+	tool = meld
 [mergetool "kdiff3"]
 	trustExitCode = false
 [diff]

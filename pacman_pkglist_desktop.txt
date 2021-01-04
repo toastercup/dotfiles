@@ -145,7 +145,6 @@ java-environment-common
 jfsutils
 jre-openjdk
 jre8-openjdk
-kdiff3
 kimageformats
 krita
 less
@@ -176,6 +175,7 @@ make
 man-db
 man-pages
 mdadm
+meld
 mindmaster
 minecraft-launcher
 mpd
@@ -215,7 +215,6 @@ pkgconf
 playonlinux
 plex-media-player
 polari
-polychromatic
 postgresql
 postman-bin
 procps-ng
@@ -234,7 +233,6 @@ qbittorrent
 qt5ct
 quodlibet
 radegast-ng
-razercommander
 razergenie
 read-edid
 redis
