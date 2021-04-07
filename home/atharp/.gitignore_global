@@ -50,13 +50,13 @@ ltximg/**
 
 # cask packages
 .cask/
-dist/
+# dist/
 
 # Flycheck
 flycheck_*.el
 
 # server auth directory
-/server/
+# /server/
 
 # projectiles files
 .projectile
@@ -133,7 +133,7 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
-out/
+# out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -333,12 +333,12 @@ GitHub.sublime-settings
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
-[Bb]in
-[Ii]nclude
-[Ll]ib
-[Ll]ib64
-[Ll]ocal
-[Ss]cripts
+# [Bb]in
+# [Ii]nclude
+# [Ll]ib
+# [Ll]ib64
+# [Ll]ocal
+# [Ss]cripts
 pyvenv.cfg
 .venv
 pip-selfcheck.json
@@ -412,20 +412,20 @@ $RECYCLE.BIN/
 mono_crash.*
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
+# [Dd]ebug/
+# [Dd]ebugPublic/
+# [Rr]elease/
+# [Rr]eleases/
+# x64/
+# x86/
+# [Ww][Ii][Nn]32/
+# [Aa][Rr][Mm]/
+# [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
+# [Bb]in/
+# [Oo]bj/
+# [Ll]og/
+# [Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -455,7 +455,7 @@ BenchmarkDotNet.Artifacts/
 # .NET Core
 project.lock.json
 project.fragment.lock.json
-artifacts/
+# artifacts/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
@@ -568,10 +568,10 @@ DocProject/Help/Html2
 DocProject/Help/html
 
 # Click-Once directory
-publish/
+# publish/
 
 # Publish Web Output
-*.[Pp]ublish.xml
+# *.[Pp]ublish.xml
 *.azurePubxml
 # Note: Comment the next line if you want to checkin your web deploy settings,
 # but database connection strings (with potential passwords) will be unencrypted
@@ -588,7 +588,7 @@ PublishScripts/
 # NuGet Symbol Packages
 *.snupkg
 # The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
+# **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
@@ -645,7 +645,7 @@ Generated_Code/
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
 _UpgradeReport_Files/
-Backup*/
+# Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 ServiceFabricBackup/
