@@ -4,8 +4,6 @@ export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrus
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins
 
-echo "Useful commands: cdc, dup, con"
-
 # A shortcut function that simplifies usage of xclip.
 # - Accepts input from either stdin (pipe), or params.
 # ------------------------------------------------
