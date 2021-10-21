@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -euo pipefail
+
+function show_help() {
+    echo "lsl-compile usage"
+    echo ""
+    echo "    lsl-compile <env-file> <main-file>"
+    echo ""
+    exit 1
+}
+
+if [ "$#" -lt 2 ]; then
+    echo "not enough arguments"
+    show_help
+fi
+
+declare -r ENV_FILE=$1
+declare -r MAIN_FILE=$2
+declare -r MAIN_FILE_REALPATH=$(realpath "$MAIN_FILE")
+declare -r TEMP_FILE=$(mktemp)
+
+cat "$ENV_FILE" >> "$TEMP_FILE"
+echo -e "\n#include \""$MAIN_FILE_REALPATH"\"" >> "$TEMP_FILE"
+
+declare -r OUTPUT=$(lsl-pyoptimizer --bom -p gcpp "$TEMP_FILE")
+rm "$TEMP_FILE"
+echo "$OUTPUT"
