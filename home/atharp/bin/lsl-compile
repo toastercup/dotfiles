@@ -15,14 +15,13 @@ if [ "$#" -lt 2 ]; then
     show_help
 fi
 
-declare -r ENV_FILE=$1
-declare -r MAIN_FILE=$2
-declare -r MAIN_FILE_REALPATH=$(realpath "$MAIN_FILE")
-declare -r TEMP_FILE=$(mktemp)
+declare -r ENV_FILE_REALPATH=$(realpath "$1")
+declare -r MAIN_FILE_REALPATH=$(realpath "$2")
 
-cat "$ENV_FILE" >> "$TEMP_FILE"
-echo -e "\n#include \""$MAIN_FILE_REALPATH"\"" >> "$TEMP_FILE"
+declare -r LSL_INPUT=$(cat <<EOF
+#include "$ENV_FILE_REALPATH"
+#include "$MAIN_FILE_REALPATH"
+EOF
+)
 
-declare -r OUTPUT=$(lsl-pyoptimizer --bom -p gcpp "$TEMP_FILE")
-rm "$TEMP_FILE"
-echo "$OUTPUT"
+lsl-pyoptimizer --bom -p gcpp <(echo -e "$LSL_INPUT")
