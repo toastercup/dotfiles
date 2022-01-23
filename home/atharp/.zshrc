@@ -48,4 +48,5 @@ alias cbwd="pwd | cb"
 # Copy most recent command in bash history
 alias cbhs="cat $HISTFILE | tail -n 1 | cb"
 
+unalias ll
 source $HOME/.aliases
