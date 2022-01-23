@@ -1,8 +1,3 @@
-alias nodejs="node"
+source "$HOME/.aliases_secret"
 
-# Work-specific aliases
-alias cdc="cd ~/repos/calendly"
-alias con="cdc && ~/repos/calendly/bin/rails c"
-alias dup="docker-compose --file ~/repos/calendly/docker/docker-compose.dev.yml up -d"
-alias dstop="docker-compose --file ~/repos/calendly/docker/docker-compose.dev.yml stop"
-alias ddown="docker-compose --file ~/repos/calendly/docker/docker-compose.dev.yml down"
+alias nodejs="node"
