@@ -10,7 +10,7 @@ else
     elif [ "$1" = "next" ]
     then
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-    elif [ "$2" = "prev" ]
+    elif [ "$1" = "prev" ]
     then
         dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
     fi
