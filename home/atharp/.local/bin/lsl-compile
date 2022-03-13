@@ -15,6 +15,14 @@ if [ "$#" -lt 2 ]; then
     show_help
 fi
 
+# Which preprocessor to use. Use 'gcpp' for GNU cpp (typical on Linux);
+# use 'mcpp' for mcpp.
+PREPROC_KIND=gcpp
+
+# Full path to the preprocessor. Depends on where you have downloaded it.
+# If the preprocessor is mcpp and it is in your path, you can leave it as-is.
+PREPROC_PATH=cpp
+
 declare -r ENV_FILE_REALPATH=$(realpath "$1")
 declare -r MAIN_FILE_REALPATH=$(realpath "$2")
 
@@ -24,4 +32,4 @@ declare -r LSL_INPUT=$(cat <<EOF
 EOF
 )
 
-lsl-pyoptimizer --bom -p gcpp <(echo -e "$LSL_INPUT")
+lsl-pyoptimizer -O addstrings,-extendedglobalexpr -p "$PREPROC_KIND" --precmd="$PREPROC_PATH" <(echo -e "$LSL_INPUT")
