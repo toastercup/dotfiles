@@ -4,5 +4,4 @@ export ASDF_DIR="/opt/asdf-vm"
 export EDITOR=vim
 export DISABLE_SPRING=true
 
-export PATH=~/.local/bin:$PATH
-
+export PATH=~/bin:$PATH
