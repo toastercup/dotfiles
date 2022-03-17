@@ -14,7 +14,7 @@
 *.sig
 
 pkg/
-src/
+# src/
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
