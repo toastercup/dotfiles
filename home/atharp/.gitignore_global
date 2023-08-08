@@ -1,3 +1,12 @@
+### My own global ignore patterns
+
+*.bak
+
+# IntelliJ
+*.iml
+
+
+### Generated global ignore patterns
 # Created by https://www.toptal.com/developers/gitignore/api/vim,git,venv,macos,linux,emacs,windows,virtualenv,sublimetext,visualstudio,archlinuxpackages,rubymine,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,git,venv,macos,linux,emacs,windows,virtualenv,sublimetext,visualstudio,archlinuxpackages,rubymine,intellij
 
