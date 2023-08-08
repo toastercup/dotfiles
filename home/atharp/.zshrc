@@ -50,3 +50,9 @@ alias cbhs="cat $HISTFILE | tail -n 1 | cb"
 
 unalias ll
 source $HOME/.aliases
+source $HOME/repos/ll-magic-tools/ll.bash_completion
+
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
