@@ -1,3 +1,8 @@
 source "$HOME/.aliases_secret"
 
 alias nodejs="node"
+alias cat="bat --style=plain"
+alias l="exa -lah"
+
+# Work-specific aliases
+alias dk="ll dk"
