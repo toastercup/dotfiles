@@ -52,6 +52,8 @@ unalias ll
 source $HOME/.aliases
 source $HOME/repos/ll-magic-tools/ll.bash_completion
 
+# Include hidden files (starting with a dot) in globbing and autocompletion
+setopt GLOB_DOTS
 
 # tabtab source for packages
 # uninstall by removing these lines
